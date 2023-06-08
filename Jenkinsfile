@@ -12,6 +12,11 @@ pipeline{
                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Nevralgie/TerraxJenkins']])
             }
         }
+         stage('Login'){
+             steps{
+                 azureCLI commands: [[exportVariablesString: '', script: '']], principalCredentialId: 'c9d080da-ebeb-4030-b06e-a90d691bfab7'
+             }
+         }
         //Initiate the directory as the current workspace
         stage('Terraform init'){
             steps{

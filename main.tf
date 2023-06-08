@@ -17,7 +17,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "jktfrg" {
-  name     = "TerraxJenkTom1"
+  name     = "TerraxJenkTom"
   location = "West Europe"
 }
 

@@ -1,6 +1,7 @@
 pipeline{
     agent any
     //Specify what tool you want to use
+    //The tool name needs to match the one you used in your jenkins conf
     tools {
         terraform 'Terraform'
     }
